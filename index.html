@@ -124,6 +124,7 @@
 
         var thequery = document.globalForm.query.value;
 
+        thequery = thequery.toLowerCase();
         console.log(thequery);
 
         http.open("GET", url + thequery, true);
@@ -209,8 +210,6 @@
                     if(entry != 0){
                         cell1.innerHTML = entry;
                     }
-
-                    console.log(entry);
                 });
 
             } else {  // PHP had error, only error message sent
