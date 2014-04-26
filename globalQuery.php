@@ -20,37 +20,36 @@ if (mysqli_connect_errno())
 {
     $error =  "Failed to connect to MySQL: " . mysqli_connect_error();
 } else {
+
     $result .= $error;
     $regex = "/^.*(max|min|sum|avg)[(]([^)]*)[)]/";
     if(preg_match($regex, $query, $matches)){
         $result .= $matches[1];
+        if(count($matches) == 3){
+
+            switch ($matches[1]) {
+                case "max":
+                    getMax($result, $matches[2], $con);
+                    break;
+                case "min":
+                    getMin($result, $matches[2], $con);
+                    break;
+                case "sum":
+                    getSum($result, $matches[2], $con);
+                    break;
+                case "avg":
+                    getAvg($result, $matches[2], $con);
+                    break;
+            }
+        } else {
+            $result = "Incorrect syntax.";
+        }
+        //$result = "Went to agg";
     } else {
         //No aggregrate query, query all and put them together
-        noAggregrate();
+        noAggregrate($result, $con, $query);
+        //$result = "went to no agg";
     }
-
-    if(count($matches) == 3){
-
-        switch ($matches[1]) {
-            case "max":
-                getMax($result, $matches[2], $con);
-                break;
-            case "min":
-                getMin($result, $matches[2], $con);
-                break;
-            case "sum":
-                getSum($result, $matches[2], $con);
-                break;
-            case "avg":
-                getAvg($result, $matches[2], $con);
-                break;
-        }
-    } else {
-        $result = "Incorrect syntax.";
-    }
-
-
-
     print_r($result);
 }
 
@@ -61,7 +60,6 @@ mysqli_free_result($result);
 mysql_close($con);
 
 function getMax(&$result, $attribute, $con){
-    $result .= "Got to get Max Function, ";
 
     $q1 = "select max($attribute) from customers";
     $q2 = "select max($attribute) from lexcustomers";
@@ -87,7 +85,6 @@ function getMax(&$result, $attribute, $con){
 
 }
 function getMin(&$result, $attribute, $con){
-    $result .= "Got to get min Function, ";
 
     $q1 = "select min($attribute) from customers";
     $q2 = "select min($attribute) from lexcustomers";
@@ -138,6 +135,7 @@ function getSum(&$result, $attribute, $con){
 
 }
 function getAvg(&$result, $attribute, $con){
+
     //need the sum, and the count of each.
     $q1 = "select $attribute from customers";
     $q2 = "select $attribute from lexcustomers";
@@ -187,6 +185,68 @@ function getAvg(&$result, $attribute, $con){
 
     $result .= number_format((float)$avg, 2, '.', '');
 }
-function noAggregrate(){
+function noAggregrate(&$result, $con, $query){
+
+    //We need to replace the tables
+    $COMMA = ',';
+    $q1 = $query; //local db will be named correct
+    $q2 = preg_replace('/customers/', 'cincustomers', $query);
+    $q3 = preg_replace('/customers/', 'lexcustomers', $query);
+    $q4 = preg_replace('/customers/', 'loucustomers', $query);
+    $q5 = preg_replace('/customers/', 'padcustomers', $query);
+
+    //check if normal query is accepted, is so continue;
+    if (!mysqli_query($con,$q1))
+    {
+        $result = "Error description: " . mysqli_error($con);
+    } else {
+        $r1 = mysqli_query($con,$q1);
+        $r2 = mysqli_query($con,$q2);
+        $r3 = mysqli_query($con,$q3);
+        $r4 = mysqli_query($con,$q4);
+        $r5 = mysqli_query($con,$q5);
+
+        while($row = mysqli_fetch_array($r1))
+        {
+            $return_value = "";
+            for($i=0; $i<count($row); $i++){
+                $return_value .= $row[$i]." ";
+            }
+            $result .= $return_value.$COMMA;
+        }
+        while($row = mysqli_fetch_array($r2))
+        {
+            $return_value = "";
+            for($i=0; $i<count($row); $i++){
+                $return_value .= $row[$i]." ";
+            }
+            $result .= $return_value.$COMMA;
+        }
+        while($row = mysqli_fetch_array($r3))
+        {
+            $return_value = "";
+            for($i=0; $i<count($row); $i++){
+                $return_value .= $row[$i]." ";
+            }
+            $result .= $return_value.$COMMA;
+        }
+        while($row = mysqli_fetch_array($r4))
+        {
+            $return_value = "";
+            for($i=0; $i<count($row); $i++){
+                $return_value .= $row[$i]." ";
+            }
+            $result .= $return_value.$COMMA;
+        }
+        while($row = mysqli_fetch_array($r5))
+        {
+            $return_value = "";
+            for($i=0; $i<count($row); $i++){
+                $return_value .= $row[$i]." ";
+            }
+            $result .= $return_value.$COMMA;
+        }
+
+    }
 
 }

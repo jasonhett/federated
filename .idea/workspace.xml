@@ -3,17 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ae9134-6993-428b-a536-a0696b5b3484" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalQuery.php" afterPath="$PROJECT_DIR$/globalQuery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="federatedDB.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398479228609" ignored="false" />
+    <file path="/index.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398523476808" ignored="false" />
     <file path="/loadFile.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398468006260" ignored="false" />
     <file path="/test.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398467451645" ignored="false" />
     <file path="/localQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398463813148" ignored="false" />
     <file path="/index copy.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398462422319" ignored="false" />
     <file path="/Dummy.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398484174710" ignored="false" />
     <file path="/customerlist.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398477454227" ignored="false" />
-    <file path="/globalQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398485402943" ignored="false" />
+    <file path="/globalQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398524453412" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="24" selection-start="3911" selection-end="3911" vertical-scroll-proportion="12.142858">
+            <state line="219" column="40" selection-start="6695" selection-end="6695" vertical-scroll-proportion="0.84302324">
               <folding>
                 <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
@@ -45,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globalQuery.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="globalQuery.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/globalQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.88135594">
+            <state line="249" column="5" selection-start="7382" selection-end="7382" vertical-scroll-proportion="-76.22449">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -79,7 +80,7 @@
       <file leaf-file-name="localQuery.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="49" selection-start="897" selection-end="932" vertical-scroll-proportion="-21.875">
+            <state line="37" column="0" selection-start="944" selection-end="1153" vertical-scroll-proportion="-23.125">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -304,16 +305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="24" selection-start="3911" selection-end="3911" vertical-scroll-proportion="12.142858">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customerlist.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
@@ -332,7 +323,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/localQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="49" selection-start="897" selection-end="932" vertical-scroll-proportion="-21.875">
+        <state line="37" column="0" selection-start="944" selection-end="1153" vertical-scroll-proportion="-23.125">
           <folding>
             <element signature="e#6#163#0" expanded="true" />
           </folding>
@@ -341,9 +332,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/globalQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.88135594">
+        <state line="249" column="5" selection-start="7382" selection-end="7382" vertical-scroll-proportion="-76.22449">
           <folding>
             <element signature="e#6#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="40" selection-start="6695" selection-end="6695" vertical-scroll-proportion="0.84302324">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

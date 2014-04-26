@@ -214,7 +214,10 @@
 
             } else {  // PHP had error, only error message sent
                 // put data on screen (error message from PHP)
-                document.getElementById("message").innerHTML = error;
+                var table = document.getElementById("returntable");
+                var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                cell1.innerHTML = error;
             }
         }  // end if state 4
     }
