@@ -1,0 +1,228 @@
+
+
+</head><body>
+<center>
+    <h1>Federated Databases</h1>
+
+    <select id=queryType onchange='queryChange();'>
+        <option value="prompt">Select Database Type</option>
+        <option value="local">Use Local Database</option>
+        <option value="global">Use Global Database</option>
+    </select>
+
+    <div id="localQueries" style="display: none;">
+        <form name="localForm">
+            <table>
+                <tr>
+                    <th>Local Query:</th><th><input name="query" size="150" type="text"></th>
+                </tr>
+                <tr>
+                    <th><input value="Query" onclick="doLocalQuery();" type="button"></th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Load Customer File</th><th><input name="fileName" size="142" type="text"></th>
+                </tr>
+                <tr>
+                    <th><input value="Load" onclick="loadFile();" type="button"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="globalQueries" style="display: none;">
+        <form name="globalForm">
+            <table>
+                <tr>
+                    <th>Global Query:</th><th><input name="query" size="150" type="text"></th>
+                </tr>
+                <tr>
+                    <th><input value="Query" onclick="doGlobalQuery();" type="button"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <div id="message">
+        <table id="returntable">
+
+        </table>
+    </div>
+
+</center>
+
+</body></html>
+
+<SCRIPT LANGUAGE="javascript">
+    <!--
+    function queryChange()
+    {
+        clearMessage();
+        var selection  = document.getElementById("queryType");
+        var database = selection.options[selection.selectedIndex].value;
+        if(database == 'local'){
+            document.getElementById("localQueries").style.display="inline";
+            document.getElementById("globalQueries").style.display="none";
+        } else if (database == 'global'){
+            document.getElementById("localQueries").style.display="none";
+            document.getElementById("globalQueries").style.display="inline";
+        } else {
+            document.getElementById("localQueries").style.display="none";
+            document.getElementById("globalQueries").style.display="none";
+        }
+
+    }
+    //-->
+
+    function doLocalQuery(){
+
+        clearMessage();
+
+        //Create the XMLHttpRequest Object
+        var xmlhttp;
+        // error handling
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            try {
+                xmlhttp = new XMLHttpRequest();
+            } catch (e) {
+                xmlhttp = false;
+            }
+        }
+        http = xmlhttp;
+
+        var url = "localQuery.php?q=";
+
+        thequery = document.localForm.query.value;
+
+        http.open("GET", url + thequery, true);
+
+        // register with server what function to return data
+        http.onreadystatechange = handleQueryResponse;
+        // send request to server
+        http.send(null);
+    }
+
+    function doGlobalQuery(){
+
+        clearMessage();
+
+        //Create the XMLHttpRequest Object
+        var xmlhttp;
+        // error handling
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            try {
+                xmlhttp = new XMLHttpRequest();
+            } catch (e) {
+                xmlhttp = false;
+            }
+        }
+        http = xmlhttp;
+
+        var url = "localQuery.php?q=";
+
+        thequery = document.localForm.query.value;
+
+        http.open("GET", url + thequery, true);
+
+        // register with server what function to return data
+        http.onreadystatechange = handleQueryResponse;
+        // send request to server
+        http.send(null);
+    }
+
+    function loadFile(){
+
+        //Reset Message Center
+        clearMessage();
+
+        //Create the XMLHttpRequest Object
+        var xmlhttp;
+        // error handling
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            try {
+                xmlhttp = new XMLHttpRequest();
+            } catch (e) {
+                xmlhttp = false;
+            }
+        }
+        http = xmlhttp;
+
+        var url = "loadFile.php?f=";
+
+        file = document.localForm.fileName.value;
+
+        sdata = url + file;
+
+        console.log(sdata);
+
+        http.open("GET", sdata, true);
+
+        // register with server what function to return data
+        http.onreadystatechange = handleLoadResponse;
+        // send request to server
+        http.send(null);
+    }
+
+    function handleLoadResponse() {
+
+        //clear message area
+        var Parent = document.getElementById("returntable");
+        while(Parent.hasChildNodes())
+        {
+            Parent.removeChild(Parent.firstChild);
+        }
+        var msg;
+        // response=4 means server completed request
+        if (http.readyState == 4) {
+            // comma separated data received, split into array
+            results = http.responseText.split(",");
+            msg = results[0];   // must be first (error message)
+            // If data returned
+            var table = document.getElementById("returntable");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = msg;
+        }  // end if state 4
+    }
+
+    function handleQueryResponse() {
+        var error;
+        // response=4 means server completed request
+        if (http.readyState == 4) {
+            // comma separated data received, split into array
+            results = http.responseText.split(",");
+            error = results[0];   // must be first (error message)
+            console.log(error);
+            // If data returned
+            if (error == 0) {        // > 0 normal response (no error)
+                //data will be stored in results, need printed
+
+                results.forEach(function(entry) {
+                    console.log(entry.toString());
+                    var table = document.getElementById("returntable");
+                    var row = table.insertRow(0);
+                    var cell1 = row.insertCell(0);
+                    if(entry != 0){
+                        cell1.innerHTML = entry;
+                    }
+
+                    console.log(entry);
+                });
+
+            } else {  // PHP had error, only error message sent
+                // put data on screen (error message from PHP)
+                document.getElementById("message").innerHTML = error;
+            }
+        }  // end if state 4
+    }
+
+    function clearMessage(){
+        var Parent = document.getElementById("returntable");
+        while(Parent.hasChildNodes())
+        {
+            Parent.removeChild(Parent.firstChild);
+        }
+    }
+</SCRIPT>

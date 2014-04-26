@@ -1,0 +1,4 @@
+﻿DATA FILE!!
+6, Singh, Simon, 543 House Str. Lexington KY, 5232.32,
+7, Bond, Bob, 734 Mall Rd. Louisville KY, 23622.32
+

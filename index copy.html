@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Database Compartments</title>
+
+<script language="JavaScript">
+
+var globaluser = "";
+var globalpass = "";
+
+
+
+function login(){
+    //Reset Message Center
+
+
+    //Create the XMLHttpRequest Object
+    var xmlhttp;
+    // error handling
+    if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+        try {
+            xmlhttp = new XMLHttpRequest();
+        } catch (e) {
+            xmlhttp = false;
+        }
+    }
+    http = xmlhttp;
+
+    var url = "login.php?u=";
+
+    user = document.JForm.user.value;
+    pass = document.JForm.pass.value;
+
+    sdata = user + "&p=" + pass;
+
+    http.open("GET", url + sdata, true);
+
+    // register with server what function to return data
+    http.onreadystatechange = handleLoginResponse;
+    // send request to server
+    http.send(null);
+}
+function handleLoginResponse() {
+    var error;
+    // response=4 means server completed request
+    if (http.readyState == 4) {
+        // comma separated data received, split into array
+        results = http.responseText.split(",");
+        error = results[0];   // must be first (error message)
+        // If data returned
+        if (error == 0) {        // > 1 normal response (no error)
+            //data will be stored in results, need printed
+            document.getElementById("divLogin").style.display = "none"
+            document.getElementById("queries").style.display = "inline";
+            globaluser = results[1];
+            globalpass = results[2];
+
+        } else {  // PHP had error, only error message sent
+            // put data on screen (error message from PHP)
+            document.getElementById("message").innerHTML = error;
+        }
+    }  // end if state 4
+}
+
+function doquery(){
+
+    var Parent = document.getElementById("returntable");
+    while(Parent.hasChildNodes())
+    {
+        Parent.removeChild(Parent.firstChild);
+    }
+
+    //Create the XMLHttpRequest Object
+    var xmlhttp;
+    // error handling
+    if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+        try {
+            xmlhttp = new XMLHttpRequest();
+        } catch (e) {
+            xmlhttp = false;
+        }
+    }
+    http = xmlhttp;
+
+    var url = "query.php?u=";
+
+    user = globaluser;
+    pass = globalpass;
+    thequery = document.QForm.query.value;
+
+    sdata = user + "&p=" + pass + "&q=" + thequery;
+
+    http.open("GET", url + sdata, true);
+
+    // register with server what function to return data
+    http.onreadystatechange = handleQueryResponse;
+    // send request to server
+    http.send(null);
+}
+function handleQueryResponse() {
+    var error;
+    // response=4 means server completed request
+    if (http.readyState == 4) {
+        // comma separated data received, split into array
+        results = http.responseText.split(",");
+        error = results[0];   // must be first (error message)
+        // If data returned
+        if (error == 0) {        // > 0 normal response (no error)
+            //data will be stored in results, need printed
+            results.forEach(function(entry) {
+
+                var table = document.getElementById("returtnable");
+                var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                if(entry != 0){
+                    cell1.innerHTML = entry;
+                }
+
+                console.log(entry);
+            });
+
+        } else {  // PHP had error, only error message sent
+            // put data on screen (error message from PHP)
+            document.getElementById("message").innerHTML = error;
+        }
+    }  // end if state 4
+}
+
+</script>
+
+</head><body>
+<center>
+    <h1>Database Compartments</h1>
+
+    <div id="divLogin" style="display: block;">
+        <form name="JForm">
+            <table>
+                <tr>
+                    <th>Username:</th><th><input name="user" size="5" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Password:</th><th><input name="pass" size="5" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Login</th><th><input value="Start" onclick="login();" type="button"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="queries" style="display: none;">
+        <form name="QForm">
+            <table>
+                <tr>
+                    <th>Query:</th><th><input name="query" size="150" type="text"></th>
+                </tr>
+                <tr>
+                    <th><input value="Query" onclick="doquery();" type="button"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <div id="message">
+        <table id="returntable">
+
+        </table>
+    </div>
+
+</center>
+
+</body></html>
