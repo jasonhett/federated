@@ -30,7 +30,7 @@ if (mysqli_connect_errno())
      */
     $regex = "/^.*(max|min|sum|avg)[(]([^)]*)[)]/";
     if(preg_match($regex, $query, $matches)){
-        $result .= $matches[1];
+        //ß$result .= $matches[1];
         if(count($matches) == 3){
 
             /* Send the flow into appropriate function */

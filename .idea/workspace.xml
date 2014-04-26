@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ae9134-6993-428b-a536-a0696b5b3484" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalQuery.php" afterPath="$PROJECT_DIR$/globalQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loadFile.php" afterPath="$PROJECT_DIR$/loadFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/localQuery.php" afterPath="$PROJECT_DIR$/localQuery.php" />
     </list>
     <ignored path="federatedDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding>
                 <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
@@ -48,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globalQuery.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="globalQuery.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/globalQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="216" column="2" selection-start="6627" selection-end="6627" vertical-scroll-proportion="-66.12245">
+            <state line="32" column="11" selection-start="858" selection-end="858" vertical-scroll-proportion="0.5755396">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -111,10 +108,10 @@
         <option value="$PROJECT_DIR$/index copy.html" />
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/customerlist.txt" />
-        <option value="$PROJECT_DIR$/globalQuery.php" />
         <option value="$PROJECT_DIR$/loadFile.php" />
         <option value="$PROJECT_DIR$/localQuery.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/globalQuery.php" />
       </list>
     </option>
   </component>
@@ -307,15 +304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/globalQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="2" selection-start="6627" selection-end="6627" vertical-scroll-proportion="-66.12245">
-          <folding>
-            <element signature="e#6#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loadFile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="92" selection-start="531" selection-end="531" vertical-scroll-proportion="-13.75">
@@ -347,6 +335,15 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/globalQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="11" selection-start="858" selection-end="858" vertical-scroll-proportion="0.5755396">
+          <folding>
+            <element signature="e#6#163#0" expanded="true" />
           </folding>
         </state>
       </provider>
