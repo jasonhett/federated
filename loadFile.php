@@ -20,7 +20,8 @@ if (mysqli_connect_errno())
 {
     $msg =  "Failed to connect to MySQL: " . mysqli_connect_error();
 } else {
-    //Attemp to load the csv file.
+    /* Attemp to load the csv file. It requires adjustment to meet the format of the infile.
+    */
     $query =    "LOAD DATA LOCAL INFILE '$file' INTO TABLE customers FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 LINES";
 
     if(!$results = mysqli_query($con,$query)){

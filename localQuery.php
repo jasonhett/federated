@@ -27,11 +27,6 @@ if (mysqli_connect_errno())
     } else {
         $results = mysqli_query($con,$query);
         $return_value = $error;
-//        $numfields = mysql_num_fields($result);
-//        for ($i=0; $i < $numfields; $i++){
-//            $return_value .= mysql_field_name($result, $i). " ";
-//        }
-//        $return_value .= $COMMA;
         print_r($return_value);
         while($row = mysqli_fetch_array($results))
         {

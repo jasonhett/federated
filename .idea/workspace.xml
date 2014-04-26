@@ -4,17 +4,19 @@
     <list default="true" id="c9ae9134-6993-428b-a536-a0696b5b3484" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalQuery.php" afterPath="$PROJECT_DIR$/globalQuery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loadFile.php" afterPath="$PROJECT_DIR$/loadFile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/localQuery.php" afterPath="$PROJECT_DIR$/localQuery.php" />
     </list>
     <ignored path="federatedDB.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398523476808" ignored="false" />
+    <file path="/index.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398531152777" ignored="false" />
     <file path="/loadFile.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398468006260" ignored="false" />
     <file path="/test.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398467451645" ignored="false" />
     <file path="/localQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398463813148" ignored="false" />
     <file path="/index copy.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398462422319" ignored="false" />
     <file path="/Dummy.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398484174710" ignored="false" />
     <file path="/customerlist.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398477454227" ignored="false" />
-    <file path="/globalQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398524453412" ignored="false" />
+    <file path="/globalQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398531015056" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="40" selection-start="6695" selection-end="6695" vertical-scroll-proportion="0.84302324">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
@@ -49,7 +51,7 @@
       <file leaf-file-name="globalQuery.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/globalQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="5" selection-start="7382" selection-end="7382" vertical-scroll-proportion="-76.22449">
+            <state line="216" column="2" selection-start="6627" selection-end="6627" vertical-scroll-proportion="-66.12245">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -69,7 +71,7 @@
       <file leaf-file-name="loadFile.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadFile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="46" selection-start="520" selection-end="520" vertical-scroll-proportion="-14.375">
+            <state line="22" column="92" selection-start="531" selection-end="531" vertical-scroll-proportion="-13.75">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -80,7 +82,7 @@
       <file leaf-file-name="localQuery.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="944" selection-end="1153" vertical-scroll-proportion="-23.125">
+            <state line="28" column="31" selection-start="641" selection-end="641" vertical-scroll-proportion="-17.5">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -107,19 +109,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index copy.html" />
-        <option value="$PROJECT_DIR$/localQuery.php" />
         <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/loadFile.php" />
         <option value="$PROJECT_DIR$/customerlist.txt" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/globalQuery.php" />
+        <option value="$PROJECT_DIR$/loadFile.php" />
+        <option value="$PROJECT_DIR$/localQuery.php" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="1054" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -214,7 +216,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="1028" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -305,16 +307,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customerlist.txt">
+    <entry file="file://$PROJECT_DIR$/globalQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="216" column="2" selection-start="6627" selection-end="6627" vertical-scroll-proportion="-66.12245">
+          <folding>
+            <element signature="e#6#163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadFile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="46" selection-start="520" selection-end="520" vertical-scroll-proportion="-14.375">
+        <state line="22" column="92" selection-start="531" selection-end="531" vertical-scroll-proportion="-13.75">
           <folding>
             <element signature="e#6#163#0" expanded="true" />
           </folding>
@@ -323,25 +327,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/localQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="944" selection-end="1153" vertical-scroll-proportion="-23.125">
+        <state line="28" column="31" selection-start="641" selection-end="641" vertical-scroll-proportion="-17.5">
           <folding>
             <element signature="e#6#163#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/globalQuery.php">
+    <entry file="file://$PROJECT_DIR$/customerlist.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="5" selection-start="7382" selection-end="7382" vertical-scroll-proportion="-76.22449">
-          <folding>
-            <element signature="e#6#163#0" expanded="true" />
-          </folding>
+        <state line="8" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="40" selection-start="6695" selection-end="6695" vertical-scroll-proportion="0.84302324">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
