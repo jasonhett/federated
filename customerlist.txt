@@ -1,0 +1,8 @@
+﻿Customer Data File!!
+6, Singh, Simon, 543 House Str. Lexington KY, 5232.32,
+7, Bond, Bob, 734 Mall Rd. Louisville KY, 23622.32,
+8, Melan, James, 434 Engineer Way Lexington Ky, 5432.12,
+9, Serway, Haley, 89 Physics Ln. Wilmore KY, 12389.32,
+10, Jewett, Roger, 934 Kennedy Rd. Jackson AK, 54.99,
+
+

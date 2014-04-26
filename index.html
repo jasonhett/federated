@@ -94,7 +94,7 @@
 
         var url = "localQuery.php?q=";
 
-        thequery = document.localForm.query.value;
+        var thequery = document.localForm.query.value;
 
         http.open("GET", url + thequery, true);
 
@@ -120,9 +120,11 @@
         }
         http = xmlhttp;
 
-        var url = "localQuery.php?q=";
+        var url = "globalQuery.php?q=";
 
-        thequery = document.localForm.query.value;
+        var thequery = document.globalForm.query.value;
+
+        console.log(thequery);
 
         http.open("GET", url + thequery, true);
 
