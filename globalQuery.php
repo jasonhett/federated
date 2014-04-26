@@ -36,13 +36,13 @@ if (mysqli_connect_errno())
                 getMax($result, $matches[2], $con);
                 break;
             case "min":
-                getMin();
+                getMin($result, $matches[2], $con);
                 break;
             case "sum":
-                getSum();
+                getSum($result, $matches[2], $con);
                 break;
             case "avg":
-                getAvg();
+                getAvg($result, $matches[2], $con);
                 break;
         }
     } else {
@@ -86,14 +86,106 @@ function getMax(&$result, $attribute, $con){
     $result .= max($arr);
 
 }
-function getMin(){
+function getMin(&$result, $attribute, $con){
+    $result .= "Got to get min Function, ";
+
+    $q1 = "select min($attribute) from customers";
+    $q2 = "select min($attribute) from lexcustomers";
+    $q3 = "select min($attribute) from loucustomers";
+    $q4 = "select min($attribute) from padcustomers";
+    $q5 = "select min($attribute) from cincustomers";
+
+    $r1 = mysqli_query($con,$q1);
+    $r2 = mysqli_query($con,$q2);
+    $r3 = mysqli_query($con,$q3);
+    $r4 = mysqli_query($con,$q4);
+    $r5 = mysqli_query($con,$q5);
+
+    $rw1 = mysqli_fetch_array($r1);
+    $rw2 = mysqli_fetch_array($r2);
+    $rw3 = mysqli_fetch_array($r3);
+    $rw4 = mysqli_fetch_array($r4);
+    $rw5 = mysqli_fetch_array($r5);
+
+    $arr = array($rw1[0], $rw2[0], $rw3[0], $rw4[0], $rw5[0]);
+
+    $result .= min($arr);
 
 }
-function getSum(){
+function getSum(&$result, $attribute, $con){
+
+    $q1 = "select $attribute from customers";
+    $q2 = "select $attribute from lexcustomers";
+    $q3 = "select $attribute from loucustomers";
+    $q4 = "select $attribute from padcustomers";
+    $q5 = "select $attribute from cincustomers";
+
+    $r1 = mysqli_query($con,$q1);
+    $r2 = mysqli_query($con,$q2);
+    $r3 = mysqli_query($con,$q3);
+    $r4 = mysqli_query($con,$q4);
+    $r5 = mysqli_query($con,$q5);
+
+    $rw1 = mysqli_fetch_array($r1);
+    $rw2 = mysqli_fetch_array($r2);
+    $rw3 = mysqli_fetch_array($r3);
+    $rw4 = mysqli_fetch_array($r4);
+    $rw5 = mysqli_fetch_array($r5);
+
+    $arr = array($rw1[0], $rw2[0], $rw3[0], $rw4[0], $rw5[0]);
+
+    $result .= array_sum($arr);
 
 }
-function getAvg(){
+function getAvg(&$result, $attribute, $con){
+    //need the sum, and the count of each.
+    $q1 = "select $attribute from customers";
+    $q2 = "select $attribute from lexcustomers";
+    $q3 = "select $attribute from loucustomers";
+    $q4 = "select $attribute from padcustomers";
+    $q5 = "select $attribute from cincustomers";
 
+    $r1 = mysqli_query($con,$q1);
+    $r2 = mysqli_query($con,$q2);
+    $r3 = mysqli_query($con,$q3);
+    $r4 = mysqli_query($con,$q4);
+    $r5 = mysqli_query($con,$q5);
+
+    $rw1 = mysqli_fetch_array($r1);
+    $rw2 = mysqli_fetch_array($r2);
+    $rw3 = mysqli_fetch_array($r3);
+    $rw4 = mysqli_fetch_array($r4);
+    $rw5 = mysqli_fetch_array($r5);
+
+    $arr = array($rw1[0], $rw2[0], $rw3[0], $rw4[0], $rw5[0]);
+
+    $sum = array_sum($arr);
+
+    $q1 = "select count($attribute) from customers";
+    $q2 = "select count($attribute) from lexcustomers";
+    $q3 = "select count($attribute) from loucustomers";
+    $q4 = "select count($attribute) from padcustomers";
+    $q5 = "select count($attribute) from cincustomers";
+
+    $r1 = mysqli_query($con,$q1);
+    $r2 = mysqli_query($con,$q2);
+    $r3 = mysqli_query($con,$q3);
+    $r4 = mysqli_query($con,$q4);
+    $r5 = mysqli_query($con,$q5);
+
+    $rw1 = mysqli_fetch_array($r1);
+    $rw2 = mysqli_fetch_array($r2);
+    $rw3 = mysqli_fetch_array($r3);
+    $rw4 = mysqli_fetch_array($r4);
+    $rw5 = mysqli_fetch_array($r5);
+
+    $arr = array($rw1[0], $rw2[0], $rw3[0], $rw4[0], $rw5[0]);
+
+    $count = array_sum($arr);
+
+    $avg = $sum/$count;
+
+    $result .= number_format((float)$avg, 2, '.', '');
 }
 function noAggregrate(){
 

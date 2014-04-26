@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9ae9134-6993-428b-a536-a0696b5b3484" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/globalQuery.php" afterPath="$PROJECT_DIR$/globalQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="federatedDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +13,7 @@
     <file path="/index copy.html" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398462422319" ignored="false" />
     <file path="/Dummy.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398484174710" ignored="false" />
     <file path="/customerlist.txt" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398477454227" ignored="false" />
-    <file path="/globalQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398484411967" ignored="false" />
+    <file path="/globalQuery.php" changelist="c9ae9134-6993-428b-a536-a0696b5b3484" time="1398485402943" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="24" selection-start="3911" selection-end="3911" vertical-scroll-proportion="-12.551021">
+            <state line="137" column="24" selection-start="3911" selection-end="3911" vertical-scroll-proportion="12.142858">
               <folding>
                 <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
@@ -49,7 +48,7 @@
       <file leaf-file-name="globalQuery.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/globalQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="2102" selection-end="2102" vertical-scroll-proportion="1.5084746">
+            <state line="190" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.88135594">
               <folding>
                 <element signature="e#6#163#0" expanded="true" />
               </folding>
@@ -298,16 +297,26 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/customerlist.txt">
+    <entry file="file://$PROJECT_DIR$/index copy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+        <state line="100" column="31" selection-start="2873" selection-end="2873" vertical-scroll-proportion="1.1162791">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index copy.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="31" selection-start="2873" selection-end="2873" vertical-scroll-proportion="1.1162791">
+        <state line="137" column="24" selection-start="3911" selection-end="3911" vertical-scroll-proportion="12.142858">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customerlist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -317,16 +326,6 @@
         <state line="23" column="46" selection-start="520" selection-end="520" vertical-scroll-proportion="-14.375">
           <folding>
             <element signature="e#6#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="24" selection-start="3911" selection-end="3911" vertical-scroll-proportion="-12.551021">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#center#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#center#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -342,7 +341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/globalQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2102" selection-end="2102" vertical-scroll-proportion="1.5084746">
+        <state line="190" column="0" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.88135594">
           <folding>
             <element signature="e#6#163#0" expanded="true" />
           </folding>
