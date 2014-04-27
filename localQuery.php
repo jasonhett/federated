@@ -24,6 +24,7 @@ if (mysqli_connect_errno())
     if (!mysqli_query($con,$query))
     {
         $error = "Error description: " . mysqli_error($con);
+        print_r($error);
     } else {
         $results = mysqli_query($con,$query);
         $return_value = $error;
